@@ -3,11 +3,36 @@
 import { motion } from 'framer-motion'
 
 const skills = {
-  Frontend: ['React', 'Next.js', 'Tailwind CSS', 'JavaScript', 'TypeScript'],
-  Backend: ['Node.js', 'Express', 'Python', 'FastAPI', 'MongoDB'],
-  DevOps: ['Git', 'Docker', 'GitHub Actions', 'Vercel', 'Linux'],
-  AI: ['PyTorch', 'TensorFlow', 'OpenAI API', 'RAG', 'HuggingFace'],
-}
+    Frontend: [
+      { name: 'React', icon: 'devicon-react-original' },
+      { name: 'Next.js', icon: 'devicon-nextjs-original' },
+      { name: 'Tailwind CSS', icon: 'devicon-tailwindcss-plain' },
+      { name: 'JavaScript', icon: 'devicon-javascript-plain' },
+      { name: 'TypeScript', icon: 'devicon-typescript-plain' },
+    ],
+    Backend: [
+      { name: 'Node.js', icon: 'devicon-nodejs-plain' },
+      { name: 'Express', icon: 'devicon-express-original' },
+      { name: 'Python', icon: 'devicon-python-plain' },
+      { name: 'FastAPI', icon: 'devicon-python-plain' }, // no FastAPI icon
+      { name: 'MongoDB', icon: 'devicon-mongodb-plain' },
+    ],
+    DevOps: [
+      { name: 'Git', icon: 'devicon-git-plain' },
+      { name: 'Docker', icon: 'devicon-docker-plain' },
+      { name: 'GitHub Actions', icon: 'devicon-github-original' },
+      { name: 'Vercel', icon: 'devicon-vercel-original' },
+      { name: 'Linux', icon: 'devicon-linux-plain' },
+    ],
+    AI: [
+      { name: 'PyTorch', icon: 'devicon-pytorch-original' },
+      { name: 'TensorFlow', icon: 'devicon-tensorflow-original' },
+      { name: 'OpenAI API', icon: 'devicon-python-plain' },
+      { name: 'RAG', icon: 'devicon-python-plain' },
+      { name: 'HuggingFace', icon: 'devicon-python-plain' },
+    ],
+  }
+  
 
 export default function Skills() {
   return (
@@ -36,16 +61,18 @@ export default function Skills() {
           >
             <h3 className="text-xl text-white font-semibold mb-4">{category}</h3>
             <div className="flex flex-wrap gap-3">
-              {items.map((skill, j) => (
-                <motion.span
-                  key={skill}
-                  className="px-3 py-1 text-sm rounded-full bg-white/10 text-purple-200 hover:bg-purple-500/20 hover:text-white transition-all"
-                  whileHover={{ scale: 1.1 }}
-                  transition={{ type: 'spring', stiffness: 300 }}
-                >
-                  {skill}
-                </motion.span>
-              ))}
+            {items.map(({ name, icon }, j) => (
+            <motion.span
+                key={name}
+                className="px-3 py-1 text-sm rounded-full bg-white/10 text-purple-200 hover:bg-purple-500/20 hover:text-white flex items-center gap-2 transition-all"
+                whileHover={{ scale: 1.1 }}
+                transition={{ type: 'spring', stiffness: 300 }}
+            >
+                <i className={`${icon} text-lg`} />
+                {name}
+            </motion.span>
+            ))}
+
             </div>
           </motion.div>
         ))}
