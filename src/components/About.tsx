@@ -19,7 +19,7 @@ export default function About() {
           className="w-full md:w-1/3 flex justify-center"
         >
           <Image
-            src="/photo.png" // 👈 replace with your image file in /public
+            src="/profile.png" // 👈 replace with your image file in /public
             alt="Profile picture of Mercy"
             width={250}
             height={250}
