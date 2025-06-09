@@ -21,7 +21,7 @@ export default function Hero() {
           transition={{ delay: 0.2, duration: 0.8 }}
           className="text-2xl sm:text-3xl font-semibold text-gray-300 mt-4"
         >
-          MS in CS @ SIUE · Ex-SWE @ Accenture
+          MS in CS, SIUE · Ex-SWE @ Accenture
         </motion.h2>
 
         <motion.p
@@ -40,6 +40,12 @@ export default function Hero() {
             className="mt-10 flex justify-center gap-6"
             >
             <a
+              href="mailto:ruthmercym7@gmail.com"
+              className="hover:scale-110 transition"
+            >
+              <img src="/gmail.svg" alt="Gmail" className="w-8 h-8" />
+            </a>
+            <a
                 href="https://github.com/RuTh-git"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -54,12 +60,6 @@ export default function Hero() {
                 className="hover:scale-110 transition"
             >
                 <img src="/linkedin.png" alt="LinkedIn" className="w-8 h-8" />
-            </a>
-            <a
-                href="#contact"
-                className="text-white border border-white/20 px-4 py-2 rounded-full hover:bg-white/10 transition text-sm font-medium"
-            >
-                Contact Me
             </a>
         </motion.div>
 

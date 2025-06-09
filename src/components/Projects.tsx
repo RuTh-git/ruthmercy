@@ -5,21 +5,38 @@ import Link from 'next/link'
 
 const projects = [
   {
-    title: 'Stocks for Noobs',
-    description:
-      'A simulation-based learning platform for stock market beginners. Features company search, visual stock data, and clean UI for learning.',
-    tech: ['Next.js', 'Alpha Vantage API', 'Tailwind CSS'],
-    link: 'https://your-link.com',
-    image: '/stocks.jpeg', // Place in /public folder
-  },
-  {
-    title: 'AI Portfolio Chatbot',
-    description:
-      'An AI assistant built into my portfolio that responds to questions about my experience and projects using OpenAI.',
-    tech: ['Next.js', 'OpenAI API', 'Framer Motion'],
-    link: 'https://your-chatbot-link.com',
-    image: '/chatbot-bg.png',
-  },
+  title: 'ChatPDF SaaS',
+  description:
+    'Built scalable backend APIs with Next.js and PostgreSQL, containerized for cloud deployment. CI/CD pipeline set up using GitHub Actions for automated testing and releases.',
+  tech: ['Next.js', 'TypeScript', 'PostgreSQL', 'GitHub Actions'],
+  link: 'https://github.com/RuTh-git',
+  image: '/chatpdf.png', // Add image to /public
+},
+{
+  title: 'RAG Chatbot',
+  description:
+    'A serverless chatbot using Node.js and OpenAI APIs with vector search for semantic queries. Deployed on Vercel with real-time response support.',
+  tech: ['Next.js', 'OpenAI', 'Vercel'],
+  link: 'https://github.com/RuTh-git',
+  image: '/rag-chatbot.png',
+},
+{
+  title: 'Sorting Algorithm Visualizer',
+  description:
+    'Interactive web app to visualize various sorting algorithms with real-time animations and speed controls.',
+  tech: ['JavaScript', 'React'],
+  link: 'https://github.com/RuTh-git',
+  image: '/sort-visualizer.png',
+},
+{
+  title: 'Semantic AI Book Recommender',
+  description:
+    'Semantic search app using LLMs, LangChain, and sentiment analysis to recommend books from natural language queries. Includes a real-time Gradio-based UI.',
+  tech: ['OpenAI', 'LangChain', 'Gradio'],
+  link: 'https://github.com/RuTh-git',
+  image: '/book-recommender.png',
+},
+
 ]
 
 export default function Projects() {

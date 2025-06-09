@@ -2,14 +2,32 @@
 
 import { useForm } from 'react-hook-form'
 import { motion } from 'framer-motion'
+import emailjs from 'emailjs-com' // Email-JS service
+import { useState } from 'react'
 
 export default function ContactForm() {
   const { register, handleSubmit, reset, formState: { errors } } = useForm()
+  const [loading, setLoading] = useState(false)
 
   const onSubmit = (data: any) => {
-    console.log(data)
-    alert('Message sent!')
-    reset()
+    setLoading(true)
+    emailjs.send(
+      'service_5uuy6a9',      // e.g. 'service_abcd1234'
+      'template_13e3y7p',     // e.g. 'template_contact'
+      data,
+      '1kg75xuyVyhQny9KE'       // e.g. 'user_abcdXYZ'
+    )
+    .then(() => {
+      alert('Message sent successfully!')
+      reset()
+    })
+    .catch((error) => {
+      console.error('Email send error:', error)
+      alert('Failed to send message.')
+    })
+    .finally(() => {
+      setLoading(false)
+    })
   }
 
   return (
@@ -46,9 +64,12 @@ export default function ContactForm() {
 
       <button
         type="submit"
-        className="w-full py-3 rounded-md bg-purple-600 hover:bg-purple-700 text-white font-semibold transition"
+        disabled={loading}
+        className={`w-full py-3 rounded-md ${
+          loading ? 'bg-purple-400 cursor-not-allowed' : 'bg-purple-600 hover:bg-purple-700'
+        } text-white font-semibold transition`}
       >
-        Send Message
+        {loading ? 'Sending...' : 'Send Message'}
       </button>
     </motion.form>
   )

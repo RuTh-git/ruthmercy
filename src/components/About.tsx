@@ -39,19 +39,20 @@ export default function About() {
             About Me
           </h2>
           <p className="text-lg md:text-xl leading-8 text-gray-300">
-            Hey, I’m <span className="font-semibold text-white">Mercy</span> — a software engineer focused on building clean,
-            scalable web apps and AI tools. I’ve worked at
-            <span className="font-semibold text-white"> Accenture</span> and as a
-            <span className="font-semibold text-white"> Teaching Assistant</span>, helping others grow in data structures,
-            algorithms, and real-world development.
+            Hey, I’m <span className="font-semibold text-white">Mercy</span> — a software engineer passionate about building clean,
+            scalable web apps and AI-powered tools. I’ve worked at
+            <span className="font-semibold text-white"> Accenture</span> as a Software Engineer and at
+            <span className="font-semibold text-white"> SIUE</span> as a Teaching Assistant, helping others grow in data structures,
+            algorithms, and practical development skills.
           </p>
           <p className="text-lg md:text-xl leading-8 text-gray-300 mt-6">
-            I enjoy solving real problems, writing clean code, and continuously improving. Outside of tech, I love
+            I enjoy solving real-world problems, writing clean code, and continuously improving. Outside of tech, I love
             <span className="text-white font-medium"> cooking</span>,
             <span className="text-white font-medium"> walking</span>, and exploring
-            <span className="text-white font-medium"> music</span>. I’m currently focused on shipping side projects,
-            system design prep, and leveling up interview skills.
+            <span className="text-white font-medium"> music</span>. Right now, I’m focused on launching side projects,
+            prepping for system design interviews, and leveling up my engineering skills.
           </p>
+
         </motion.div>
       </div>
     </section>
