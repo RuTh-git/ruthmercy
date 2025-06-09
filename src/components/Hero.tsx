@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 
 export default function Hero() {
   return (
@@ -43,7 +44,7 @@ export default function Hero() {
               href="mailto:ruthmercym7@gmail.com"
               className="hover:scale-110 transition"
             >
-              <img src="/gmail.svg" alt="Gmail" className="w-8 h-8" />
+              <Image src="/gmail.svg" alt="Gmail" width={32} height={32} />
             </a>
             <a
                 href="https://github.com/RuTh-git"
@@ -51,7 +52,7 @@ export default function Hero() {
                 rel="noopener noreferrer"
                 className="hover:scale-110 transition"
             >
-                <img src="/github.png" alt="GitHub" className="w-8 h-8" />
+                <Image src="/github.png" alt="GitHub" width={32} height={32} />
             </a>
             <a
                 href="https://linkedin.com/in/ruthmercy/"
@@ -59,7 +60,7 @@ export default function Hero() {
                 rel="noopener noreferrer"
                 className="hover:scale-110 transition"
             >
-                <img src="/linkedin.png" alt="LinkedIn" className="w-8 h-8" />
+                <Image src="/linkedin.png" alt="LinkedIn" width={32} height={32} />
             </a>
         </motion.div>
 

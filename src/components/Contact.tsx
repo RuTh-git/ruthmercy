@@ -2,20 +2,27 @@
 
 import { useForm } from 'react-hook-form'
 import { motion } from 'framer-motion'
-import emailjs from 'emailjs-com' // Email-JS service
+import emailjs from 'emailjs-com'
 import { useState } from 'react'
 
+// ✅ Type definition for form data
+type FormData = {
+  name: string
+  email: string
+  message: string
+}
+
 export default function ContactForm() {
-  const { register, handleSubmit, reset, formState: { errors } } = useForm()
+  const { register, handleSubmit, reset, formState: { errors } } = useForm<FormData>()
   const [loading, setLoading] = useState(false)
 
-  const onSubmit = (data: any) => {
+  const onSubmit = (data: FormData) => {
     setLoading(true)
     emailjs.send(
       process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
       process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
       data,
-      process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!     // e.g. 'user_abcdXYZ'
+      process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
     )
     .then(() => {
       alert('Message sent successfully!')

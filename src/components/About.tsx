@@ -39,7 +39,7 @@ export default function About() {
             About Me
           </h2>
           <p className="text-lg md:text-xl leading-8 text-gray-300">
-            Hey, I’m <span className="font-semibold text-white">Mercy</span> — a software engineer passionate about building clean,
+            Hey, I&apos;m <span className="font-semibold text-white">Mercy</span> — a software engineer passionate about building clean,
             scalable web apps and AI-powered tools. I’ve worked at
             <span className="font-semibold text-white"> Accenture</span> as a Software Engineer and at
             <span className="font-semibold text-white"> SIUE</span> as a Teaching Assistant, helping others grow in data structures,

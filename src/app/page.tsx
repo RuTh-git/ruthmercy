@@ -4,7 +4,6 @@ import About from '../components/About'
 import Projects from '../components/Projects'
 import Work from '../components/Work'
 import Skills from '../components/Skills'
-import Chatbot from '../components/Chatbot'
 import ContactForm from '../components/Contact'
 
 export default function Home() {
