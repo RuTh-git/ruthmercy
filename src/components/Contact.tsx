@@ -12,10 +12,10 @@ export default function ContactForm() {
   const onSubmit = (data: any) => {
     setLoading(true)
     emailjs.send(
-      'service_5uuy6a9',      // e.g. 'service_abcd1234'
-      'template_13e3y7p',     // e.g. 'template_contact'
+      process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+      process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
       data,
-      '1kg75xuyVyhQny9KE'       // e.g. 'user_abcdXYZ'
+      process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!     // e.g. 'user_abcdXYZ'
     )
     .then(() => {
       alert('Message sent successfully!')
